@@ -6,16 +6,18 @@ const HeaderCartButton = (props) => {
   return (
     <button
       // type={props.type || 'button'}
-      // className={`${classes.button} ${props.className}`}
+      className={classes.button}
       // onClick={props.onClick}
       // disabled={props.disabled}
     >
-      <span>
+      <span className={classes.icon}>
         <CartIcon />
       </span>
-      <span></span>
-      <span></span>
-      {props.children}
+      <span>Cart</span>
+      <span className={ classes.badge }>
+        3
+      </span>
+      {/* {props.children} */}
     </button> 
   );
 };
