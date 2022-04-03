@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from './MealsSummary.module.css';
+import Card from '../UI/Card';
+
 const DUMMY_MEALS = [
   {
     id: 'm1',
@@ -33,9 +35,11 @@ function AvailableMeals() {
     <section className={classes.meals}>
       
       <div>AvailableMeals</div>
+      <Card>
       <ul>
         {mealsList}
-      </ul>
+        </ul>
+      </Card>
     </section>
   )
 }
