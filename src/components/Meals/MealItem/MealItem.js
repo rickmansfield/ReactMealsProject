@@ -22,7 +22,7 @@ const MealItem = (props) => {
 
       <div>
         {/* <button onClick={props.onClick}>Add to Cart</button> */}
-        <MealItemForm />
+        <MealItemForm id={props.id}/>
       </div>
 
     </li>
