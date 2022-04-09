@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Cart.module.css';
-import Modal from '../UI/Modal/Modal';
+import Modal from '../UI/Modal';
 function Cart(props) {
   const cartItems =
     <ul className={classes['cart-items']}>{
