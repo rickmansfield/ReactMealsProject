@@ -22,7 +22,10 @@ function Modal(props) {
   return (
     <Fragment>
       {ReactDom.createPortal(<Backdrop />, portalElement)}
-      {ReactDom.createPortal(<ModalOverlay>{props.children}</ModalOverlay>)}
+      {ReactDom.createPortal(
+        <ModalOverlay>{props.children}</ModalOverlay>,
+        portalElement
+      )}
     </Fragment>
   )
 }
