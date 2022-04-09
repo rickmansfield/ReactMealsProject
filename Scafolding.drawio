@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="xnUkQfgUfg--KisKvy0v" name="Page-1">
-        <mxGraphModel dx="473" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="402" dy="435" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -31,7 +31,7 @@
                         <mxRectangle x="360" y="400" width="120" height="23" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="Dummy Data&lt;br&gt;&lt;br&gt;Function&lt;br&gt;mealsList = &amp;lt;MealItem /&amp;gt;&amp;nbsp;&lt;br&gt;Map MealItem&lt;br&gt;&lt;br&gt;Return &lt;br&gt;&amp;lt;Card &lt;br&gt;{mealsList} = &amp;lt;MealItem /&amp;gt;&lt;br&gt;/&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="7" vertex="1">
+                <mxCell id="14" value="Dummy Data&lt;br&gt;&lt;br&gt;Function&lt;br&gt;mealsList = &amp;lt;MealItem /&amp;gt;&amp;nbsp;&lt;br&gt;Map MealItem&lt;br&gt;id = {meal.id}&lt;br&gt;Return &lt;br&gt;&amp;lt;Card &lt;br&gt;{mealsList} = &amp;lt;MealItem /&amp;gt;&lt;br&gt;/&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="7" vertex="1">
                     <mxGeometry x="20" y="35" width="160" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="Header&lt;br&gt;Title &amp;amp; Cart" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -54,8 +54,8 @@
                         <mxRectangle x="235" y="600" width="80" height="23" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="19" value="Name&amp;nbsp;&lt;br&gt;Description&lt;br&gt;Price" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
-                    <mxGeometry x="20" y="40" width="80" height="50" as="geometry"/>
+                <mxCell id="19" value="Name&amp;nbsp;&lt;br&gt;Description&lt;br&gt;Price&lt;br&gt;props.id passed" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
+                    <mxGeometry x="10" y="35" width="100" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="15" target="7" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -97,12 +97,12 @@
                     <mxGeometry x="505" y="680" width="70" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="MealItemForm" style="swimlane;" parent="1" vertex="1">
-                    <mxGeometry x="180" y="800" width="120" height="120" as="geometry">
+                    <mxGeometry x="150" y="800" width="200" height="120" as="geometry">
                         <mxRectangle x="235" y="600" width="80" height="23" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="33" value="&amp;lt;form&amp;gt;&lt;br&gt;&amp;lt;input /&amp;gt;&lt;br&gt;&amp;lt;button&amp;gt;&lt;br&gt;&amp;lt;/form&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="32" vertex="1">
-                    <mxGeometry x="30" y="35" width="60" height="60" as="geometry"/>
+                <mxCell id="33" value="&amp;lt;form&amp;gt;&lt;br&gt;&amp;lt;input /&amp;gt;&lt;br&gt;&amp;lt;button&amp;gt;&lt;br&gt;&amp;lt;/form&amp;gt;&lt;br&gt;props.id used and passed" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="32" vertex="1">
+                    <mxGeometry x="25" y="30" width="150" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="32" target="15" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -110,13 +110,19 @@
                         <mxPoint x="400" y="720" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="36" value="Input" style="swimlane;" vertex="1" parent="1">
+                <mxCell id="36" value="Input" style="swimlane;" parent="1" vertex="1">
                     <mxGeometry x="180" y="960" width="120" height="120" as="geometry">
                         <mxRectangle x="235" y="600" width="80" height="23" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="37" value="&amp;lt;label&amp;gt;&lt;br&gt;&amp;lt;input /&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="36">
+                <mxCell id="37" value="&amp;lt;label&amp;gt;&lt;br&gt;&amp;lt;input /&amp;gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="36" vertex="1">
                     <mxGeometry x="30" y="50" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="36" target="32">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="370" y="940" as="sourcePoint"/>
+                        <mxPoint x="420" y="890" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
