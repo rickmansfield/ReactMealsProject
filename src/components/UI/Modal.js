@@ -18,7 +18,7 @@ const ModalOverlay = (props) => {
 
 const portalElement = document.getElementById('overlays');
 
-function Modal(props) {
+const Modal = (props) => {
   return (
     <Fragment>
       {ReactDom.createPortal(<Backdrop />, portalElement)}
@@ -28,6 +28,6 @@ function Modal(props) {
       )}
     </Fragment>
   )
-}
+};
 
 export default Modal
