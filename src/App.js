@@ -6,17 +6,17 @@ import Cartprovider from "./store/CartProvider";
 function App() {
   const [cartIsShown, setCartIsShowing] = useState(false);
   
-  const showCartHander = () => {
+  const showCartHandler = () => {
     setCartIsShowing(true);
   };
 
-  const hideCartHander = () => { 
+  const hideCartHandler = () => { 
     setCartIsShowing(false);
   }
   return (
     <Cartprovider>
-      {cartIsShown && <Cart onClose={hideCartHander} />}
-      <Header onShowCart={showCartHander} />
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
