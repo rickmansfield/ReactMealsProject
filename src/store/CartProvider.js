@@ -65,7 +65,7 @@ const CartProvider = (props) => {
     cartReducer,
     defaultCartState
   );
-  
+
   const addItemToCartHandler = (item) => {
     dispatchCartAction({
       type: "ADD",
@@ -81,7 +81,7 @@ const CartProvider = (props) => {
 
   const cartContext = {
     items: cartState.items,
-    totalAmount: 0,
+    totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
