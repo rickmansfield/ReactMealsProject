@@ -15,8 +15,9 @@ function App() {
   }
   return (
     <Cartprovider>
+      {/* if cartIsShown is true, then show the cart */}
       {cartIsShown && <Cart onClose={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
+      <Header onClick={showCartHandler} />
       <main>
         <Meals />
       </main>
