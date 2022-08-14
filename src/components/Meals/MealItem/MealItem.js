@@ -5,7 +5,7 @@ import CartContext from '../../../store/cart-context';
 
 
 const MealItem = (props) => {
-  console.log('MealItem.js lin 6 props', props);
+  // console.log('MealItem.js lin 6 props', props);
   const cartCtx = useContext(CartContext);
   const price = `$${props.price.toFixed(2)}`;
 

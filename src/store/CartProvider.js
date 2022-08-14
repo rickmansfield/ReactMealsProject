@@ -36,7 +36,7 @@ const cartReducer = (state, action) => {
 };
 
 const CartProvider = (props) => {
-  console.log("CartProvider.js props");
+  // console.log("CartProvider.js props");
   const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
     defaultCartState
