@@ -5,7 +5,7 @@ import classes from './HeaderCartButton.module.css';
 
 const HeaderCartButton = (props) => {
   const cartCtx = useContext(CartContext);
-  const numberofCartItems = cartCtx.items.reduce((curNumber, item) => {
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
   return (
@@ -20,7 +20,7 @@ const HeaderCartButton = (props) => {
       </span>
       <span>Cart</span>
       <span className={classes.badge}>
-        {numberofCartItems}
+        {numberOfCartItems}
       </span>
       {/* {props.children} */}
     </button>
