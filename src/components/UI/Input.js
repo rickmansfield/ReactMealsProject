@@ -4,7 +4,7 @@ import classes from './Input.module.css';
 const Input = React.forwardRef((props, ref) => {
   // console.log('Input.js lin 5 props', props);
   return (
-    <div className={classes.Input}>
+    <div className={classes.input}>
       <label htmlFor={props.input.id}>
         {props.label}
       </label>
