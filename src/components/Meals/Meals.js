@@ -3,7 +3,8 @@ import AvailableMeals from "./AvailableMeals";
 import { Fragment } from "react";
 
 
-const Meals = () => {
+const Meals = (props) => {
+  console.log('Meals.js props: ', props);
   return (
     <Fragment>
       <MealsSummary />
