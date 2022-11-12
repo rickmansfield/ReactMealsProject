@@ -5,7 +5,6 @@ import classes from './Cart.module.css';
 import  CartContext  from '../../store/cart-context';
 
 const Cart = (props) => {
-  // console.log('Cart.js props line 8: ', props);
   const cartCtx = useContext(CartContext);
 
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
@@ -36,7 +35,7 @@ const Cart = (props) => {
     <Modal onClose={props.onClose}>
       {cartItems}
       <div className={classes.total}>
-        <span>Total Amount:</span>
+        <span>Cart Total Amount:</span>
         <span>{totalAmount}</span>
       </div>
       <div className={classes.actions}>
