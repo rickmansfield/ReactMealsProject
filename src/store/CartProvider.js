@@ -35,38 +35,41 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
   }
-//  if (action.type === 'REMOVE') {
-//     const existingCartItemIndex = state.items.findIndex(
-//       (item) => item.id === action.id
-//     );
-//     const existingItem = state.items[existingCartItemIndex];
-//     const updatedTotalAmount = state.totalAmount - existingItem.price;
-//     let updatedItems;
-//     if (existingItem.amount === 1) {
-//       updatedItems = state.items.filter(item => item.id !== action.id);
-//     } else {
-//       const updatedItem = { ...existingItem, amount: existingItem.amount - 1 };
-//       updatedItems = [...state.items];
-//       updatedItems[existingCartItemIndex] = updatedItem;
-//     }
+ if (action.type === 'REMOVE') {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    const existingItem = state.items[existingCartItemIndex];
+    const updatedTotalAmount = state.totalAmount - existingItem.price;
+    let updatedItems;
+    if (existingItem.amount === 1) {
+      updatedItems = state.items.filter(item => item.id !== action.id);
+    } else {
+      const updatedItem = { ...existingItem, amount: existingItem.amount - 1 };
+      updatedItems = [...state.items];
+      updatedItems[existingCartItemIndex] = updatedItem;
+    }
 
-//     return {
-//       items: updatedItems,
-//       totalAmount: updatedTotalAmount
-//     };
-//   }
+    return {
+      items: updatedItems,
+      totalAmount: updatedTotalAmount
+    };
+  }
 
   return defaultCartState;
 };
 
-
+//The Provider gives any component that is wrapped in it access to needed data. 
+// Here, however, CartProvider is stored as a constant, 
+//and the value is set to the cartReducer function which is destructured into the state and dispatch functions.
 const CartProvider = (props) => {
   // console.log("CartProvider.js props");
   const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
     defaultCartState
   );
-
+//These constants store the functions that will be used to add and remove items from the cart. better known as actions.
+//These could be stored in a separate file known as an Actions Suite, but for now they are stored here.
   const addItemToCartHandler = (item) => {
     dispatchCartAction({
       type: "ADD",
